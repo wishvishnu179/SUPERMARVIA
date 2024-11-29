@@ -1,27 +1,27 @@
 class script(object):
-    START_TXT = """𝙷𝙴𝙻𝙾 {},
-𝙼𝚈 𝙽𝙰𝙼𝙴 𝙸𝚂 <a href=https://t.me/{}>{}</a>, 𝙸 𝙲𝙰𝙽 𝙿𝚁𝙾𝚅𝙸𝙳𝙴 𝙼𝙾𝚅𝙸𝙴𝚂, 𝙹𝚄𝚂𝚃 𝙰𝙳𝙳 𝙼𝙴 𝚃𝙾 𝚈𝙾𝚄𝚁 𝙶𝚁𝙾𝚄𝙿 𝙰𝙽𝙳 𝙴𝙽𝙹𝙾𝚈 😍"""
+    START_TXT = """𝐻𝑒𝑙𝑙𝑜 {},
+𝑀𝑦 𝑁𝑎𝑚𝑒 𝐼𝑠 <a href=https://t.me/{}>{}</a>, 𝐼 𝐴𝑚 𝐴 𝑆𝑖𝑚𝑝𝑙𝑒 𝐴𝑢𝑡𝑜𝐹𝑖𝑙𝑡𝑒𝑟 𝐵𝑜𝑡, 𝐼 𝐶𝑎𝑛 𝑃𝑟𝑜𝑣𝑖𝑑𝑒 𝑀𝑜𝑣𝑖𝑒𝑠, 𝐽𝑢𝑠𝑡 𝑆𝑒𝑎𝑟𝑐ℎ 𝑌𝑜𝑢𝑟 𝑅𝑒𝑞𝑢𝑒𝑠𝑡𝑒𝑑 𝑀𝑜𝑣𝑖𝑒 𝑜𝑟 𝑆𝑒𝑟𝑖𝑒𝑠 𝑁𝑎𝑚𝑒 𝐴𝑛𝑑 𝐸𝑛𝑗𝑜𝑦 😍"""
     HELP_TXT = """𝙷𝙴𝚈 {}
 𝙷𝙴𝚁𝙴 𝙸𝚂 𝚃𝙷𝙴 𝙷𝙴𝙻𝙿 𝙵𝙾𝚁 𝙼𝚈 𝙲𝙾𝙼𝙼𝙰𝙽𝙳𝚂."""
-    ABOUT_TXT = """✯ 𝙼𝚈 𝙽𝙰𝙼𝙴: {}
-✯ 𝙲𝚁𝙴𝙰𝚃𝙾𝚁: <a href=https://t.me/TeamEvamaria>Team Eva Maria</a>
-✯ 𝙻𝙸𝙱𝚁𝙰𝚁𝚈: 𝙿𝚈𝚁𝙾𝙶𝚁𝙰𝙼
-✯ 𝙻𝙰𝙽𝙶𝚄𝙰𝙶𝙴: 𝙿𝚈𝚃𝙷𝙾𝙽 𝟹
-✯ 𝙳𝙰𝚃𝙰 𝙱𝙰𝚂𝙴: 𝙼𝙾𝙽𝙶𝙾 𝙳𝙱
-✯ 𝙱𝙾𝚃 𝚂𝙴𝚁𝚅𝙴𝚁: 𝙷𝙴𝚁𝙾𝙺𝚄
-✯ 𝙱𝚄𝙸𝙻𝙳 𝚂𝚃𝙰𝚃𝚄𝚂: v1.0.1 [ 𝙱𝙴𝚃𝙰 ]"""
+    ABOUT_TXT = """✯ 𝑴𝒚 𝑵𝒂𝒎𝒆: {}
+✯ 𝑪𝒓𝒆𝒂𝒕𝒐𝒓: <a href=https://t.me/TeamEvamaria>Team Eva Maria</a>
+✯ 𝑳𝒊𝒃𝒓𝒂𝒓𝒚: 𝙿𝚈𝚁𝙾𝙶𝚁𝙰𝙼
+✯ 𝑳𝒂𝒏𝒈𝒖𝒂𝒈𝒆: 𝙿𝚈𝚃𝙷𝙾𝙽 𝟹
+✯ 𝑫𝒂𝒕𝒂𝑩𝒂𝒔𝒆: 𝙼𝙾𝙽𝙶𝙾 𝙳𝙱
+✯ 𝑩𝒐𝒕 𝑺𝒆𝒓𝒗𝒆𝒓: 𝙷𝙴𝚁𝙾𝙺𝚄
+✯ 𝑩𝒖𝒊𝒍𝒅 𝑺𝒕𝒂𝒕𝒖𝒔: v1.0.1 [ 𝙱𝙴𝚃𝙰 ]"""
     SOURCE_TXT = """<b>NOTE:</b>
 - Eva Maria is a open source project. 
 - Source - https://github.com/EvamariaTG/EvaMaria  
 
 <b>DEVS:</b>
-- <a href=https://t.me/TeamEvamaria>Team Eva Maria</a>"""
+- <a href=https://t.me/TGCinemaworld>Vishnu MB🤍</a>"""
     MANUELFILTER_TXT = """Help: <b>Filters</b>
 
 - Filter is the feature were users can set automated replies for a particular keyword and EvaMaria will respond whenever a keyword is found the message
 
 <b>NOTE:</b>
-1. eva maria should have admin privillage.
+1. tgcwsearch bot should have admin privillage.
 2. only admins can add filters in a chat.
 3. alert buttons have a limit of 64 characters.
 
@@ -40,7 +40,7 @@ class script(object):
 3. Buttons should be properly parsed as markdown format
 
 <b>URL buttons:</b>
-<code>[Button Text](buttonurl:https://t.me/EvaMariaBot)</code>
+<code>[Button Text](buttonurl:https://t.me/tgcwfilterBot)</code>
 
 <b>Alert buttons:</b>
 <code>[Button Text](buttonalert:This is an alert message)</code>"""
@@ -96,6 +96,15 @@ This module only works for my admins
 ★ 𝚃𝙾𝚃𝙰𝙻 𝙲𝙷𝙰𝚃𝚂: <code>{}</code>
 ★ 𝚄𝚂𝙴𝙳 𝚂𝚃𝙾𝚁𝙰𝙶𝙴: <code>{}</code> 𝙼𝚒𝙱
 ★ 𝙵𝚁𝙴𝙴 𝚂𝚃𝙾𝚁𝙰𝙶𝙴: <code>{}</code> 𝙼𝚒𝙱"""
+    RESTART_TXT = """
+<b>Bᴏᴛ Rᴇsᴛᴀʀᴛᴇᴅ !
+
+📅 Dᴀᴛᴇ : <code>{}</code>
+⏰ Tɪᴍᴇ : <code>{}</code>
+🌐 Tɪᴍᴇᴢᴏɴᴇ : <code>Asia/Kolkata</code>
+🛠️ Bᴜɪʟᴅ Sᴛᴀᴛᴜs: <code>v4.2 [ Sᴛᴀʙʟᴇ ]</code>
+
+Bʏ @TGCWFilterbot</b>"""
     LOG_TEXT_G = """#NewGroup
 Group = {}(<code>{}</code>)
 Total Members = <code>{}</code>
