@@ -1,15 +1,15 @@
 class script(object):
     START_TXT = """𝐻𝑒𝑙𝑙𝑜 {},
 𝑀𝑦 𝑁𝑎𝑚𝑒 𝐼𝑠 <a href=https://t.me/{}>{}</a>, 𝐼 𝐴𝑚 𝐴 𝑆𝑖𝑚𝑝𝑙𝑒 𝐴𝑢𝑡𝑜𝐹𝑖𝑙𝑡𝑒𝑟 𝐵𝑜𝑡, 𝐼 𝐶𝑎𝑛 𝑃𝑟𝑜𝑣𝑖𝑑𝑒 𝑀𝑜𝑣𝑖𝑒𝑠, 𝐽𝑢𝑠𝑡 𝑆𝑒𝑎𝑟𝑐ℎ 𝑌𝑜𝑢𝑟 𝑅𝑒𝑞𝑢𝑒𝑠𝑡𝑒𝑑 𝑀𝑜𝑣𝑖𝑒 𝑜𝑟 𝑆𝑒𝑟𝑖𝑒𝑠 𝑁𝑎𝑚𝑒 𝐴𝑛𝑑 𝐸𝑛𝑗𝑜𝑦 😍"""
-    HELP_TXT = """𝙷𝙴𝚈 {}
-𝙷𝙴𝚁𝙴 𝙸𝚂 𝚃𝙷𝙴 𝙷𝙴𝙻𝙿 𝙵𝙾𝚁 𝙼𝚈 𝙲𝙾𝙼𝙼𝙰𝙽𝙳𝚂."""
+    HELP_TXT = """𝑯𝒆𝒚 {}
+𝐻𝐸𝑅𝐸 𝐼𝑆 𝑇𝐻𝐸 𝐻𝐸𝐿𝑃 𝐹𝑂𝑅 𝑀𝑌 𝐶𝑂𝑀𝑀𝐴𝑁𝐷𝑆."""
     ABOUT_TXT = """✯ 𝑴𝒚 𝑵𝒂𝒎𝒆: {}
-✯ 𝑪𝒓𝒆𝒂𝒕𝒐𝒓: <a href=https://t.me/TeamEvamaria>Team Eva Maria</a>
-✯ 𝑳𝒊𝒃𝒓𝒂𝒓𝒚: 𝙿𝚈𝚁𝙾𝙶𝚁𝙰𝙼
-✯ 𝑳𝒂𝒏𝒈𝒖𝒂𝒈𝒆: 𝙿𝚈𝚃𝙷𝙾𝙽 𝟹
-✯ 𝑫𝒂𝒕𝒂𝑩𝒂𝒔𝒆: 𝙼𝙾𝙽𝙶𝙾 𝙳𝙱
-✯ 𝑩𝒐𝒕 𝑺𝒆𝒓𝒗𝒆𝒓: 𝙷𝙴𝚁𝙾𝙺𝚄
-✯ 𝑩𝒖𝒊𝒍𝒅 𝑺𝒕𝒂𝒕𝒖𝒔: v1.0.1 [ 𝙱𝙴𝚃𝙰 ]"""
+✯ 𝑪𝒓𝒆𝒂𝒕𝒐𝒓: <a href=https://t.me/VishnuMBbot>𝐕𝐢𝐬𝐡𝐧𝐮 𝐌𝐁</a>
+✯ 𝑳𝒊𝒃𝒓𝒂𝒓𝒚: 𝑃𝑌𝑅𝑂𝐺𝑅𝐴𝑀
+✯ 𝑳𝒂𝒏𝒈𝒖𝒂𝒈𝒆: 𝑃𝑌𝑇𝐻𝑂𝑁 3.10
+✯ 𝑫𝒂𝒕𝒂𝑩𝒂𝒔𝒆: 𝑀𝑂𝑁𝐺𝑂 𝐷𝐵
+✯ 𝑩𝒐𝒕 𝑺𝒆𝒓𝒗𝒆𝒓: 𝑆𝑂𝑀𝐸𝑊𝐻𝐸𝑅𝐸
+✯ 𝑩𝒖𝒊𝒍𝒅 𝑺𝒕𝒂𝒕𝒖𝒔: 𝑉𝑒𝑟𝑠𝑖𝑜𝑛 69🤤 [ 𝙱𝙴𝚃𝙰 ]"""
     SOURCE_TXT = """<b>NOTE:</b>
 - Eva Maria is a open source project. 
 - Source - https://github.com/EvamariaTG/EvaMaria  
@@ -91,11 +91,11 @@ This module only works for my admins
 • /unban  - <code>to unban a user.</code>
 • /channel - <code>to get list of total connected channels</code>
 • /broadcast - <code>to broadcast a message to all users</code>"""
-    STATUS_TXT = """★ 𝚃𝙾𝚃𝙰𝙻 𝙵𝙸𝙻𝙴𝚂: <code>{}</code>
-★ 𝚃𝙾𝚃𝙰𝙻 𝚄𝚂𝙴𝚁𝚂: <code>{}</code>
-★ 𝚃𝙾𝚃𝙰𝙻 𝙲𝙷𝙰𝚃𝚂: <code>{}</code>
-★ 𝚄𝚂𝙴𝙳 𝚂𝚃𝙾𝚁𝙰𝙶𝙴: <code>{}</code> 𝙼𝚒𝙱
-★ 𝙵𝚁𝙴𝙴 𝚂𝚃𝙾𝚁𝙰𝙶𝙴: <code>{}</code> 𝙼𝚒𝙱"""
+    STATUS_TXT = """★ 𝑻𝑶𝑻𝑨𝑳 𝑭𝑰𝑳𝑬𝑺: <code>{}</code>
+★ 𝑻𝑶𝑻𝑨𝑳 𝑼𝑺𝑬𝑹𝑺: <code>{}</code>
+★ 𝑻𝑶𝑻𝑨𝑳 𝑪𝑯𝑨𝑻𝑺: <code>{}</code>
+★ 𝑼𝑺𝑬𝑫 𝑺𝑻𝑶𝑹𝑨𝑮𝑬: <code>{}</code> 𝙼𝚒𝙱
+★ 𝑭𝑹𝑬𝑬 𝑺𝑻𝑶𝑹𝑨𝑮𝑬: <code>{}</code> 𝙼𝚒𝙱"""
     RESTART_TXT = """
 <b>Bᴏᴛ Rᴇsᴛᴀʀᴛᴇᴅ !
 
