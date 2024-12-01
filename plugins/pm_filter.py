@@ -21,6 +21,8 @@ from database.filters_mdb import (
     find_filter,
     get_filters,
 )
+file_req_channel = FILE_REQ_CHANNEL
+
 import logging
 
 logger = logging.getLogger(__name__)
@@ -625,6 +627,12 @@ async def auto_filter(client, msg, spoll=False):
             search = message.text
             files, offset, total_results = await get_search_results(search.lower(), offset=0, filter=True)
             if not files:
+                await client.send_message(file_req_channel,f"-🦋 #REQUESTED_FILE 🦋-\n\n📝Fɪʟᴇ Nᴀᴍᴇ :{search}\n\nRᴇǫᴜᴇsᴛᴇᴅ Bʏ: {message.from_user.first_name}\n\n Usᴇʀ Iᴅ :{message.from_user.id}\n\n🗃Cᴏᴅᴇᴅᴇᴅ Bʏ  @TGCinemaworld",
+                                                                                                       reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔺 Fɪʟᴇ Uᴩʟᴏᴀᴅᴇᴅ Sᴜᴄᴄᴇssғᴜʟʟʏ 🔺", callback_data="close_data")]]))
+                l = await message.reply_text(text=f"△ 𝑯𝒆𝒚 𝑩𝒖𝒅𝒅𝒚 {message.from_user.first_name} 😎,\n\n 𝑷𝒍𝒆𝒂𝒔𝒆 𝑪𝒉𝒆𝒄𝒌 𝒀𝒐𝒖𝒓 𝑺𝒑𝒆𝒍𝒍𝒊𝒏𝒈 𝒊𝒏 𝑮𝑶𝑶𝑮𝑳𝑬 𝑨𝒏𝒅 𝑺𝒆𝒂𝒓𝒄𝒉 𝑨𝒈𝒂𝒊𝒏, 𝑰𝒇 𝒏𝒐𝒕 𝑭𝒐𝒖𝒏𝒅 𝑷𝒍𝒛 𝒘𝒂𝒊𝒕 𝑰 𝒔𝒆𝒏𝒅 𝒀𝒐𝒖𝒓 𝑹𝒆𝒒𝒖𝒆𝒔𝒕 𝑻𝒐 𝑴𝒚 𝑨𝒅𝒎𝒊𝒏𝒔, 𝑻𝒉𝒆𝒚 𝑾𝒊𝒍𝒍 𝑨𝑫𝑫 𝒚𝒐𝒖𝒓 𝑭𝒊𝒍𝒆𝒔 𝑺𝒐𝒐𝒏 😇\n\n➟ 📝𝒀𝒐𝒖𝒓 𝑹𝒆𝒒𝒖𝒆𝒔𝒕𝒆𝒅 𝑵𝒂𝒎𝒆 : {search}\n\n➟ 👮 𝑹𝒆𝒒𝒖𝒆𝒔𝒕𝒆𝒅 𝑩𝒚 𝒀𝒐𝒖 : {message.from_user.first_name}☆",
+                                                                                                       reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("𝑪𝒐𝒏𝒕𝒂𝒄𝒕 𝑴𝒚 𝑨𝒅𝒎𝒊𝒏", url=f'http://t.me/vishnumbbot'),[InlineKeyboardButton("𝑩𝒐𝒕 𝑼𝒑𝒅𝒂𝒕𝒆𝒔", url="https://t.me/Tgcwupdates")],[InlineKeyboardButton("♥️𝑪𝒍𝒐𝒔𝒆 𝑻𝒉𝒊𝒔 𝑴𝑺𝑮♥️«", callback_data="close_data")]]))
+                await asyncio.sleep(12)
+                await l.delete()
                 if settings["spell_check"]:
                     return await advantage_spell_chok(msg)
                 else:
