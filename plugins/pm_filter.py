@@ -718,9 +718,9 @@ async def auto_filter(client, msg, spoll=False):
         cap = f"𝑯𝒆𝒓𝒆 𝑰𝒔 𝑾𝒉𝒂𝒕 𝑰 𝑭𝒐𝒖𝒏𝒅 𝑰𝒏 𝑴𝒚 𝑫𝒂𝒕𝒂𝑩𝒂𝒔𝒆: <code> {search} </code>"
     if imdb and imdb.get('poster'):
         try:
-            await message.reply_photo(photo=imdb.get('poster'), caption=cap[:1024],
+            hehe =  await message.reply_photo(photo=imdb.get('poster'), caption=cap[:1024],
                                       reply_markup=InlineKeyboardMarkup(btn))
-        if AUTO_DELETE:
+            if AUTO_DELETE:
                 await asyncio.sleep(AUTO_DELETE_SECONDS)
                 await hehe.delete()
 
@@ -741,8 +741,7 @@ async def auto_filter(client, msg, spoll=False):
         fuk = await message.reply_text(cap, reply_markup=InlineKeyboardMarkup(btn))
         if AUTO_DELETE:
             await asyncio.sleep(AUTO_DELETE_SECONDS)
-            await fuk.delete()
-
+            await fuk.delete() 
 
 async def advantage_spell_chok(msg):
     query = re.sub(
