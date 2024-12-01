@@ -1,6 +1,6 @@
 pyrogram
 tgcrypto
-pymongo[srv]
+pymongo
 motor
 marshmallow
 umongo
