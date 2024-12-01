@@ -70,3 +70,4 @@ LOG_STR += f"Your current IMDB template is {IMDB_TEMPLATE}"
 
 AUTO_DELETE_SECONDS = int(environ.get('AUTO_DELETE_SECONDS', 3600))
 AUTO_DELETE =  environ.get('AUTO_DELETE', 'True')
+FILE_REQ_CHANNEL = int(environ.get('FILE_REQ_CHANNEL', LOG_CHANNEL))
