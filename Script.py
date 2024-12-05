@@ -105,6 +105,8 @@ This module only works for my admins
 🛠️ Bᴜɪʟᴅ Sᴛᴀᴛᴜs: <code>v4.2 [ Sᴛᴀʙʟᴇ ]</code>
 
 Bʏ @TGCWFilterbot</b>"""
+    CAPTION = """ <b><i><a href="https://telegram.me/Tgcinemaworld">{file_caption}</a>\nSize:-<i>{file_size}</i>\nJoin:- @TGCinemaworld</i></b>\n\n"""
+    
     LOG_TEXT_G = """#NewGroup
 Group = {}(<code>{}</code>)
 Total Members = <code>{}</code>
