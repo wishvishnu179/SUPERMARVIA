@@ -1,8 +1,7 @@
-FROM python:3.9
+FROM python:3.12-slim
 WORKDIR /app
-
-COPY requirements.txt /app/
-RUN pip3 install -r requirements.txt
-
-COPY . /app
-CMD gunicorn app:app & python3 bot.py
+COPY . /app/
+RUN pip install --upgrade pip \
+    && pip install -r requirements.txt
+EXPOSE 8080
+CMD ["python", "bot.py"]
