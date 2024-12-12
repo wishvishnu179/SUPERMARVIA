@@ -23,8 +23,6 @@ from pyrogram import utils as pyroutils
 pyroutils.MIN_CHAT_ID = -999999999999
 pyroutils.MIN_CHANNEL_ID = -100999999999999
 
-loop = asyncio.get_event_loop()
-
 class Bot(Client):
 
     def __init__(self):
