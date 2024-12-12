@@ -23,7 +23,7 @@ USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', False))
 PICS = (environ.get('PICS', 'https://envs.sh/Y7e.jpg')).split()
 
 #FSub
-AUTH_CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('AUTH_CHANNELS', '-1001996186113 -1002327129494 -1002102444314').split()] # give channel id with seperate space. Ex : ('-10073828 -102782829 -1007282828')
+AUTH_CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('AUTH_CHANNELS', '-1001996186113 -1002493042419 -1002102444314').split()] # give channel id with seperate space. Ex : ('-10073828 -102782829 -1007282828')
 auth_channel = environ.get('AUTH_CHANNEL')
 AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else None
 
@@ -42,7 +42,7 @@ DATABASE_NAME = environ.get('DATABASE_NAME', "Cluster0")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 
 # Others
-LOG_CHANNEL = int(environ.get('LOG_CHANNEL', 0))
+LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1002052274277'))
 SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'tgcwsupport')
 P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "False")), False)
 IMDB = is_enabled((environ.get('IMDB', "False")), True)
