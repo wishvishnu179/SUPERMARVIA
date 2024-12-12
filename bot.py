@@ -57,6 +57,11 @@ class Bot(Client):
         now = datetime.now(tz)
         time = now.strftime("%H:%M:%S %p")
         await self.send_message(chat_id=LOG_CHANNEL, text=script.RESTART_TXT.format(today, time))
+        app = web.AppRunner(await web_server())
+        await app.setup()
+        bind_address = "0.0.0.0"
+        await web.TCPSite(app, bind_address, PORT).start()
+        await idle()
 
     async def stop(self, *args):
         await super().stop()
@@ -102,8 +107,5 @@ class Bot(Client):
                 current += 1
 
 
-if __name__ == '__main__':
-    try:
-        loop.run_until_complete(Jisshu_start())
-    except KeyboardInterrupt:
-        logging.info('Service Stopped Bye 👋')
+app = Bot()
+app.run()
