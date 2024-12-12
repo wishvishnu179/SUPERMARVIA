@@ -5,6 +5,7 @@ pymongo==4.8.0
 motor==2.5.1
 marshmallow==3.18.0
 umongo==3.1.0
+git+https://github.com/Joelkb/cinemagoer
 requests
 bs4
 imdbpy==2022.7.9
