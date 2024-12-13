@@ -1,12 +1,12 @@
-FROM node:16
+FROM python:3.9-slim-buster
 
 WORKDIR /app
 
-COPY package*.json ./
-
-RUN npm install
+COPY requirements.txt requirements.txt
+RUN pip install -r requirements.txt
 
 COPY . .
 
-EXPOSE 8080 # <--- Expose the correct port
-CMD ["npm", "start"]
+EXPOSE 8000
+
+CMD ["python", "bot.py"]
