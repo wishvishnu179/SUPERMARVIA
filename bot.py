@@ -26,7 +26,7 @@ def health_check():
 
 
 def run_flask():
-    flask_app.run(host='0.0.0.0', port=8000, debug=False, threaded=True)
+    flask_app.run(host='0.0.0.0', port=8080, debug=False, threaded=True)
 
 
 @app.on_message() # Example handler, replace with your logic
