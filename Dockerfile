@@ -9,5 +9,4 @@ COPY . .
 
 EXPOSE 8000
 
-ENTRYPOINT ["gunicorn", "--bind", "0.0.0.0:8000", "main:app"]  # Adjust 'main:app' if needed
-   
+CMD gunicorn main:main & python3 bot.py
