@@ -30,6 +30,11 @@ from pyrogram import utils as pyroutils
 pyroutils.MIN_CHAT_ID = -999999999999
 pyroutils.MIN_CHANNEL_ID = -100999999999999
 
+import os
+
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 8000))  # Get the port from the environment or default to 8000
+    app.run(host="0.0.0.0", port=port)  # Ensure the app listens on all network interfaces
 
 class Bot(Client):
 
