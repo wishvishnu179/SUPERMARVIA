@@ -1,0 +1,11 @@
+[globals]
+name = "supermarvia" # Choose a descriptive name
+
+[[services]]
+name = "web"
+type = "web"
+image = "your-docker-image-name:latest" # Replace with your actual Docker image name and tag.
+port = 8000
+env = [
+  "PORT=8000"
+]
