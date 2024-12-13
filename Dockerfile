@@ -1,9 +1,12 @@
-FROM python:3.12-slim
+FROM python:3.9-slim-buster
 
-WORKDIR /SUPERMARVIA
+WORKDIR /app
 
-COPY . /SUPERMARVIA
-
+COPY requirements.txt requirements.txt
 RUN pip install -r requirements.txt
+
+COPY . .
+
+EXPOSE 8000
 
 CMD ["python", "bot.py"]
