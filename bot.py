@@ -9,13 +9,13 @@ from pyrogram import Client
 from info import SESSION, API_ID, API_HASH, BOT_TOKEN, LOG_CHANNEL, LOG_STR
 
 app = Client(
-    name=SESSION,
-    api_id=API_ID,
-    api_hash=API_HASH,
-    bot_token=BOT_TOKEN,
-    workers=50,
-    plugins={"root": "plugins"},
-    sleep_threshold=5,
+  name=SESSION,
+  api_id=API_ID,
+  api_hash=API_HASH,
+  bot_token=BOT_TOKEN,
+  workers=50,
+  plugins={"root": "plugins"},
+  sleep_threshold=5,
 )
 
 flask_app = Flask(__name__)
