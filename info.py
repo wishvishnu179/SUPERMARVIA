@@ -13,20 +13,9 @@ def is_enabled(value, default):
 
 # Bot information
 SESSION = environ.get('SESSION', 'Media_search')
-API_ID = environ.get('API_ID', '24782930')  #api id of your telegram id
-if len(API_ID) == 0:
-    print('Error - API_ID is missing, exiting now')
-    exit()
-else:
-    API_ID = int(API_ID)
+API_ID = int(environ.get('API_ID', '24782930'))  #api id of your telegram id
 API_HASH = environ.get('API_HASH', 'd800f70c609c72fe610b1b263651c964') #api hash of your telegram id
-if len(API_HASH) == 0:
-    print('Error - API_HASH is missing, exiting now')
-    exit()
 BOT_TOKEN = environ.get('BOT_TOKEN', '6107085241:AAGrK7sO6kTsr4GdVM0UxZIvO0NtyIuEzwo') #bot token from botfather
-if len(BOT_TOKEN) == 0:
-    print('Error - BOT_TOKEN is missing, exiting now')
-    exit()
 PORT = int(environ.get('PORT', '80')) #don't change anything 
 
 # Bot settings
