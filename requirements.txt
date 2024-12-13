@@ -28,5 +28,5 @@ wget
 pytz
 aiohttp==3.10.11
 gunicorn==23.0.0
-flask==3.0.3
+Flask==2.3.2
 dnspython==2.3.0
