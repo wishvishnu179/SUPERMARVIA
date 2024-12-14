@@ -1,4 +1,3 @@
-import os
 from flask import Flask
 
 app = Flask(__name__)
@@ -16,4 +15,4 @@ def home():
 </style>"""
 
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=False, host='0.0.0.0', port=8080) # Crucial to specify port 8080 and host
