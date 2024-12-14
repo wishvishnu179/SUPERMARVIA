@@ -115,15 +115,18 @@ async def start_health_check():
     site = web.TCPSite(runner, '0.0.0.0', 8081)
     await site.start()
 
-async def run_health_check():
-    loop = asyncio.get_running_loop()
-    loop.run_until_complete(start_health_check())
-
 async def run_bot():
-    await app.run()
+    await app.start()  # Start the bot within this function
+    try:
+        await app.run() #This will never complete as you're using an event loop within an event loop
+    except Exception as e:
+        logging.exception(f"Bot stopped with error: {e}")
+    finally:
+        await app.stop()
 
 async def main():
-    await asyncio.gather(app.start(), run_health_check(), run_bot())
+    await asyncio.gather(run_health_check(), run_bot()) #The bot is started by run_bot() now
+
 
 if __name__ == "__main__":
     asyncio.run(main())
