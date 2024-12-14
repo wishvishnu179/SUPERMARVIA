@@ -2,11 +2,12 @@ import asyncio
 import logging
 import logging.config
 import os
+import importlib.util
+import sys
+from pathlib import Path
 from datetime import date, datetime
 
-import pytz
-from aiohttp import web
-from pyrogram import Client, __version__, types, utils
+from pyrogram import Client, __version__
 from pyrogram.raw.all import layer
 from database.ia_filterdb import Media
 from database.users_chats_db import db
@@ -24,7 +25,6 @@ pyroutils.MIN_CHANNEL_ID = -100999999999999
 
 
 class Bot(Client):
-
     def __init__(self):
         super().__init__(
             name=SESSION,
@@ -36,12 +36,13 @@ class Bot(Client):
             sleep_threshold=5,
         )
 
-async def Lazy_start():
+
+async def Lazy_start(bot): #Passes the bot object
     print('\n')
     print('Initalizing The Movie Provider Bot')
-    bot_info = await LazyPrincessBot.get_me()
-    LazyPrincessBot.username = bot_info.username
-    await initialize_clients()
+    bot_info = await bot.get_me()
+    bot.username = bot_info.username
+    # ... Initialize clients (what is this?)
     for name in files:
         with open(name) as a:
             patt = Path(a.name)
@@ -59,11 +60,11 @@ async def Lazy_start():
     temp.BANNED_USERS = b_users
     temp.BANNED_CHATS = b_chats
     await Media.ensure_indexes()
-    me = await LazyPrincessBot.get_me()
+    me = await bot.get_me()
     temp.ME = me.id
     temp.U_NAME = me.username
     temp.B_NAME = me.first_name
-    LazyPrincessBot.username = '@' + me.username
+    bot.username = '@' + me.username
     logging.info(f"{me.first_name} with for Pyrogram v{__version__} (Layer {layer}) started on {me.username}.")
     logging.info(LOG_STR)
     logging.info(script.LOGO)
@@ -77,6 +78,19 @@ async def Lazy_start():
     bind_address = "0.0.0.0"
     await web.TCPSite(app, bind_address, PORT).start()
     await idle()
+
+
+async def main():
+    # ... logging setup ...
+    bot = Bot()
+    try:
+        await Lazy_start(bot)
+        await bot.start()
+        await bot.idle()
+    except Exception as e:
+        logging.exception(f"A critical error occurred: {e}")
+    finally:
+        await bot.stop()
 
 
 if __name__ == "__main__":
