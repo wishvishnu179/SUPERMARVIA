@@ -11,9 +11,8 @@ logging.getLogger("imdbpy").setLevel(logging.ERROR)
 # ... (Your imports remain unchanged) ...
 
 class Bot(Client):
-    def __init__(self):
-        # ... (Your __init__ method remains unchanged) ...
-
+    def __init__(self): # ... (Your __init__ method remains unchanged) ...
+        
     async def start(self):
         b_users, b_chats = await db.get_banned()
         temp.BANNED_USERS = b_users
