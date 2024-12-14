@@ -12,4 +12,4 @@ EXPOSE 8081
 COPY . /app
 
 # Separate processes:
-CMD gunicorn app:app & python3 bot.py
+CMD [python3] [bot.py]
