@@ -56,6 +56,11 @@ class Bot(Client):
         now = datetime.now(tz)
         time = now.strftime("%H:%M:%S %p")
         await self.send_message(chat_id=LOG_CHANNEL, text=script.RESTART_TXT.format(today, time))
+        app = web.AppRunner(await web_server())
+        await app.setup()
+        bind_address = "0.0.0.0"
+        await web.TCPSite(app, bind_address, PORT).start()
+        await idle()
 
     async def stop(self, *args):
         await super().stop()
@@ -102,31 +107,9 @@ class Bot(Client):
 
 
 app = Bot()
-app_web = web.Application()
-
-async def health_check(request):
-    return web.Response(text='OK')
-
-app_web.add_routes([web.get('/health', health_check)])
-
-async def start_health_check():
-    runner = web.AppRunner(app_web)
-    await runner.setup()
-    site = web.TCPSite(runner, '0.0.0.0', 8081)
-    await site.start()
-
-async def run_bot():
-    await app.start()  # Start the bot within this function
-    try:
-        await app.run() #This will never complete as you're using an event loop within an event loop
-    except Exception as e:
-        logging.exception(f"Bot stopped with error: {e}")
-    finally:
-        await app.stop()
-
-async def main():
-    await asyncio.gather(run_health_check(), run_bot()) #The bot is started by run_bot() now
-
 
 if __name__ == "__main__":
-    asyncio.run(main())
+    try:
+        loop.run_until_complete(main())
+    except KeyboardInterrupt:
+        logging.info('Service Stopped Bye 👋')
